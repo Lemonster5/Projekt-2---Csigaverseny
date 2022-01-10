@@ -79,5 +79,16 @@ namespace Csigaverseny
             idozito3.Stop();
 
         }
+
+        private void ujBajnoksagGomb_Click(object sender, RoutedEventArgs e)
+        {
+            csiga1.Margin = new Thickness(20, 36, 0, 0);
+            csiga2.Margin = new Thickness(20, 164, 0, 0);
+            csiga3.Margin = new Thickness(20, 269, 0, 0);
+            idozito.Stop();
+            idozito2.Stop();
+            idozito3.Stop();
+            MessageBox.Show((string)allas.Content, "Bajnokság végeredmény:");
+        }
     }
 }
