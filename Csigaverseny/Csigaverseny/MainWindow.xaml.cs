@@ -24,9 +24,7 @@ namespace Csigaverseny
         DispatcherTimer idozito;
         DispatcherTimer idozito2;
         DispatcherTimer idozito3;
-        int a = new int();
-        int b = new int();
-        int c = new int();
+
         
         public MainWindow()
         {
@@ -53,7 +51,7 @@ namespace Csigaverseny
             Random rnd = new Random();
             int b = rnd.Next(0, 10);
             double b2 = csiga2.Margin.Left + b;
-            csiga2.Margin = new Thickness(b2 += a, 164, 0, 0);
+            csiga2.Margin = new Thickness(b2 += b, 164, 0, 0);
         }
         private void csiga3Mozgasa(object sender, EventArgs e)
         {
@@ -68,6 +66,17 @@ namespace Csigaverseny
             idozito.Start();
             idozito2.Start();
             idozito3.Start();
+
+        }
+
+        private void ujFutamGomb_Click(object sender, RoutedEventArgs e)
+        {
+            csiga1.Margin = new Thickness(20, 36, 0, 0);
+            csiga2.Margin = new Thickness(20, 164, 0, 0);
+            csiga3.Margin = new Thickness(20, 269, 0, 0);
+            idozito.Stop();
+            idozito2.Stop();
+            idozito3.Stop();
 
         }
     }
