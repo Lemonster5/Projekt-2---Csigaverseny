@@ -63,6 +63,9 @@
         <Image x:Name="csiga2" HorizontalAlignment="Left" Height="98" Margin="20,164,0,0" VerticalAlignment="Top" Width="130" Source="/csiga2.png"/>
         <Image x:Name="csiga1" HorizontalAlignment="Left" Height="115" Margin="20,36,0,0" VerticalAlignment="Top" Width="130" Source="/csiga1.PNG"/>
         <Image x:Name="csiga3" HorizontalAlignment="Left" Height="117" Margin="20,269,0,0" VerticalAlignment="Top" Width="133" Source="/csiga3.png"/>
+        <Label x:Name="elsoHelyezes" Content="" HorizontalAlignment="Left" Margin="546,47,0,0" VerticalAlignment="Top" Height="93" Width="57" FontSize="36"/>
+        <Label x:Name="masodikHelyezes" Content="" HorizontalAlignment="Left" Margin="546,164,0,0" VerticalAlignment="Top" Height="93" Width="57" FontSize="36"/>
+        <Label x:Name="harmadikHelyezes" Content="" HorizontalAlignment="Left" Margin="546,281,0,0" VerticalAlignment="Top" Height="93" Width="57" FontSize="36"/>
 
 
     </Grid>

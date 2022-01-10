@@ -24,6 +24,7 @@ namespace Csigaverseny
         DispatcherTimer idozito;
         DispatcherTimer idozito2;
         DispatcherTimer idozito3;
+        int helyezes = 1;
 
         
         public MainWindow()
@@ -50,6 +51,7 @@ namespace Csigaverseny
             {
                 csiga1.Margin = new Thickness(845, 36, 0, 0);
                 idozito.Stop();
+                elsoHelyezes.Content = helyezes++;
             }
             else 
             csiga1.Margin = new Thickness(a2 +=a ,36, 0, 0);
@@ -63,7 +65,8 @@ namespace Csigaverseny
             if (csiga2.Margin.Left >= 845)
             {
                 csiga2.Margin = new Thickness(845, 164, 0, 0);
-                idozito.Stop();
+                idozito2.Stop();
+                masodikHelyezes.Content = helyezes++;
             }
             else
                 csiga2.Margin = new Thickness(b2 += b, 164, 0, 0);
@@ -77,6 +80,7 @@ namespace Csigaverseny
             {
                 csiga3.Margin = new Thickness(845, 269, 0, 0);
                 idozito3.Stop();
+                harmadikHelyezes.Content = helyezes++;
             }
             else
                 csiga3.Margin = new Thickness(c2 += c, 269, 0, 0);
