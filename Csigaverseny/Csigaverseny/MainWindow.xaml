@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:Csigaverseny"
         mc:Ignorable="d"
         Title="Csigaverseny" Height="550" Width="1000">
-    <Grid x:Name="Csigaverseny">
+    <Grid x:Name="csigaverseny">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="StartGomb" Content="Start" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="startGomb" Content="Start" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="90" Click="startGomb_Click"/>
         <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Width="90"/>
         <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="240,10,0,0" VerticalAlignment="Top" Width="90"/>
         <Rectangle HorizontalAlignment="Center" Height="351" Margin="0,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="960"/>
-        <Rectangle x:Name="elsoSav" HorizontalAlignment="Center" Height="117" Margin="0,35,0,0" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
-        <Rectangle x:Name="masodikSav" HorizontalAlignment="Center" Height="117" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
-        <Rectangle x:Name="harmadikSav" HorizontalAlignment="Center" Height="117" Margin="0,269,0,0" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
+        <Rectangle x:Name="elsoSav" HorizontalAlignment="Center" Height="117" Margin="0,35,0,0" VerticalAlignment="Top" Width="970" Fill="#FF53BF34"/>
+        <Rectangle x:Name="masodikSav" HorizontalAlignment="Center" Height="117" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="970" Fill="#FF53BF34"/>
+        <Rectangle x:Name="harmadikSav" HorizontalAlignment="Center" Height="117" Margin="0,269,0,0" VerticalAlignment="Top" Width="970" Fill="#FF53BF34"/>
         <Rectangle x:Name="rajtVonal" HorizontalAlignment="Left" Height="351" Margin="150,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="5
                    " RenderTransformOrigin="0.5,0.5" StrokeThickness="3">
             <Rectangle.RenderTransform>
