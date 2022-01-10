@@ -14,9 +14,9 @@
         <Button x:Name="ujFutamGomb" Content="Új futam" HorizontalAlignment="Left" Margin="130,10,0,0" VerticalAlignment="Top" Width="90"/>
         <Button x:Name="ujBajnoksagGomb" Content="Új bajnokság" HorizontalAlignment="Left" Margin="240,10,0,0" VerticalAlignment="Top" Width="90"/>
         <Rectangle HorizontalAlignment="Center" Height="351" Margin="0,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="960"/>
-        <Rectangle x:Name="elsoSav" HorizontalAlignment="Center" Height="117" Margin="0,35,0,0" VerticalAlignment="Top" Width="960"/>
-        <Rectangle x:Name="masodikSav" HorizontalAlignment="Center" Height="117" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="960"/>
-        <Rectangle x:Name="harmadikSav" HorizontalAlignment="Center" Height="117" Margin="0,269,0,0" VerticalAlignment="Top" Width="960"/>
+        <Rectangle x:Name="elsoSav" HorizontalAlignment="Center" Height="117" Margin="0,35,0,0" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
+        <Rectangle x:Name="masodikSav" HorizontalAlignment="Center" Height="117" Margin="0,152,0,0" Stroke="Black" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
+        <Rectangle x:Name="harmadikSav" HorizontalAlignment="Center" Height="117" Margin="0,269,0,0" VerticalAlignment="Top" Width="960" Fill="#FF53BF34"/>
         <Rectangle x:Name="rajtVonal" HorizontalAlignment="Left" Height="351" Margin="150,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="5
                    " RenderTransformOrigin="0.5,0.5" StrokeThickness="3">
             <Rectangle.RenderTransform>
@@ -38,7 +38,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label x:Name="celLabel" Content="CÉL" HorizontalAlignment="Left" Margin="843,159,0,0" VerticalAlignment="Top" Width="188" Height="125" FontSize="100" ScrollViewer.HorizontalScrollBarVisibility="Disabled" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="celLabel" Content="CÉL" HorizontalAlignment="Left" Margin="839,157,0,0" VerticalAlignment="Top" Width="188" Height="125" FontSize="100" ScrollViewer.HorizontalScrollBarVisibility="Disabled" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -48,6 +48,22 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Rectangle x:Name="celVonal" HorizontalAlignment="Left" Height="351" Margin="975,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="5                    " RenderTransformOrigin="0.5,0.5" StrokeThickness="3">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Label Content="A bajnokság állása:" HorizontalAlignment="Left" Margin="20,391,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label x:Name="allas" Content="" HorizontalAlignment="Left" Margin="150,391,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="csiga2" HorizontalAlignment="Left" Height="98" Margin="20,164,0,0" VerticalAlignment="Top" Width="130" Source="/csiga2.png"/>
+        <Image x:Name="csiga1" HorizontalAlignment="Left" Height="115" Margin="20,36,0,0" VerticalAlignment="Top" Width="130" Source="/csiga1.PNG"/>
+        <Image x:Name="csiga3" HorizontalAlignment="Left" Height="117" Margin="20,269,0,0" VerticalAlignment="Top" Width="133" Source="/csiga3.png"/>
+
 
     </Grid>
 </Window>
