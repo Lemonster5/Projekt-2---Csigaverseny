@@ -38,27 +38,48 @@ namespace Csigaverseny
             idozito.Tick += new EventHandler(csiga1Mozgasa);
             idozito2.Tick += new EventHandler(csiga2Mozgasa);
             idozito3.Tick += new EventHandler(csiga3Mozgasa);
+
+
         }
         private void csiga1Mozgasa(object sender, EventArgs e)
         {
             Random rnd = new Random();
             int a = rnd.Next(0, 10);
             double a2 = csiga1.Margin.Left + a;
+            if (csiga1.Margin.Left >= 845 )
+            {
+                csiga1.Margin = new Thickness(845, 36, 0, 0);
+                idozito.Stop();
+            }
+            else 
             csiga1.Margin = new Thickness(a2 +=a ,36, 0, 0);
+            
         }
         private void csiga2Mozgasa(object sender, EventArgs e)
         {
             Random rnd = new Random();
             int b = rnd.Next(0, 10);
             double b2 = csiga2.Margin.Left + b;
-            csiga2.Margin = new Thickness(b2 += b, 164, 0, 0);
+            if (csiga2.Margin.Left >= 845)
+            {
+                csiga2.Margin = new Thickness(845, 164, 0, 0);
+                idozito.Stop();
+            }
+            else
+                csiga2.Margin = new Thickness(b2 += b, 164, 0, 0);
         }
         private void csiga3Mozgasa(object sender, EventArgs e)
         {
             Random rnd = new Random();
             int c = rnd.Next(0, 10);
-            double c2 = csiga3.Margin.Left + c;
-            csiga3.Margin = new Thickness(c2 += c, 269, 0, 0);
+            double c2 = csiga3.Margin.Left + c; 
+            if (csiga3.Margin.Left >= 845)
+            {
+                csiga3.Margin = new Thickness(845, 269, 0, 0);
+                idozito3.Stop();
+            }
+            else
+                csiga3.Margin = new Thickness(c2 += c, 269, 0, 0);
         }
 
         private void startGomb_Click(object sender, RoutedEventArgs e)
@@ -67,6 +88,7 @@ namespace Csigaverseny
             idozito2.Start();
             idozito3.Start();
 
+         
         }
 
         private void ujFutamGomb_Click(object sender, RoutedEventArgs e)
@@ -90,5 +112,6 @@ namespace Csigaverseny
             idozito3.Stop();
             MessageBox.Show((string)allas.Content, "Bajnokság végeredmény:");
         }
+
     }
 }
