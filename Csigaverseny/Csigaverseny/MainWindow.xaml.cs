@@ -25,7 +25,7 @@ namespace Csigaverseny
         DispatcherTimer idozito2;
         DispatcherTimer idozito3;
         int helyezes = 1;
-
+        List<Brush> helyezesek = new List<Brush>();
         
         public MainWindow()
         {
@@ -33,13 +33,16 @@ namespace Csigaverseny
             idozito = new DispatcherTimer();
             idozito2 = new DispatcherTimer();
             idozito3 = new DispatcherTimer();
-            idozito.Interval = TimeSpan.FromSeconds(0.01);
-            idozito2.Interval = TimeSpan.FromSeconds(0.01);
-            idozito3.Interval = TimeSpan.FromSeconds(0.01);
+            idozito.Interval = TimeSpan.FromSeconds(0.015);
+            idozito2.Interval = TimeSpan.FromSeconds(0.015);
+            idozito3.Interval = TimeSpan.FromSeconds(0.015);
             idozito.Tick += new EventHandler(csiga1Mozgasa);
             idozito2.Tick += new EventHandler(csiga2Mozgasa);
             idozito3.Tick += new EventHandler(csiga3Mozgasa);
-
+            helyezesek.Add(Brushes.Yellow);
+            helyezesek.Add(Brushes.Gray);
+            helyezesek.Add(Brushes.Brown);
+            ujFutamGomb.IsEnabled = false;
 
         }
         private void csiga1Mozgasa(object sender, EventArgs e)
@@ -52,6 +55,7 @@ namespace Csigaverseny
                 csiga1.Margin = new Thickness(845, 36, 0, 0);
                 idozito.Stop();
                 elsoHelyezes.Content = helyezes++;
+                elsoSav.Fill = helyezesek [helyezes - 2];
             }
             else 
             csiga1.Margin = new Thickness(a2 +=a ,36, 0, 0);
@@ -67,7 +71,9 @@ namespace Csigaverseny
                 csiga2.Margin = new Thickness(845, 164, 0, 0);
                 idozito2.Stop();
                 masodikHelyezes.Content = helyezes++;
+                masodikSav.Fill = helyezesek [helyezes - 2];
             }
+
             else
                 csiga2.Margin = new Thickness(b2 += b, 164, 0, 0);
         }
@@ -80,8 +86,14 @@ namespace Csigaverseny
             {
                 csiga3.Margin = new Thickness(845, 269, 0, 0);
                 idozito3.Stop();
+
                 harmadikHelyezes.Content = helyezes++;
+                harmadikSav.Fill = helyezesek[helyezes -2];
+                ujFutamGomb.IsEnabled = true;
+                ujBajnoksagGomb.IsEnabled = true;
+               
             }
+
             else
                 csiga3.Margin = new Thickness(c2 += c, 269, 0, 0);
         }
@@ -91,7 +103,8 @@ namespace Csigaverseny
             idozito.Start();
             idozito2.Start();
             idozito3.Start();
-
+            startGomb.IsEnabled = false;
+            ujBajnoksagGomb.IsEnabled = false;
          
         }
 
@@ -103,7 +116,15 @@ namespace Csigaverseny
             idozito.Stop();
             idozito2.Stop();
             idozito3.Stop();
-
+            startGomb.IsEnabled = true;
+            ujFutamGomb.IsEnabled = false;
+            elsoHelyezes.Content = " ";
+            masodikHelyezes.Content = " ";
+            harmadikHelyezes.Content = " ";
+            elsoSav.Fill = Brushes.Green;
+            masodikSav.Fill = Brushes.Green;
+            harmadikSav.Fill = Brushes.Green;
+            helyezes = 1;
         }
 
         private void ujBajnoksagGomb_Click(object sender, RoutedEventArgs e)
@@ -114,7 +135,18 @@ namespace Csigaverseny
             idozito.Stop();
             idozito2.Stop();
             idozito3.Stop();
+            startGomb.IsEnabled = true;
+            ujFutamGomb.IsEnabled = false;
+            elsoHelyezes.Content = " ";
+            masodikHelyezes.Content = " ";
+            harmadikHelyezes.Content = " ";
+
+            elsoSav.Fill = Brushes.Green;
+            masodikSav.Fill = Brushes.Green;
+            harmadikSav.Fill = Brushes.Green;
+            helyezes = 1;
             MessageBox.Show((string)allas.Content, "Bajnokság végeredmény:");
+
         }
 
     }
